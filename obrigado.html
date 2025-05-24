@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obrigado pela sua compra!</title>
+
+  <script>
+  !function(q,e,v,n,t,s){if(q.qp)return;t=q.qp=function(){t.sendEvent?t.sendEvent.apply(t,arguments):t.queue.push(arguments)};t.queue=[];s=e.createElement(v);s.async=!0;s.src=n;n=e.getElementsByTagName(v)[0];n.parentNode.insertBefore(s,n)}(window,document,"script","https://s.kw.ai/2wH2BWWT.js");
+  qp("init", "280062387564314");
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  const value = parseFloat(getQueryParam('valor')) || 149.90; // padrão 149.90
+  const orderId = getQueryParam('id') || 'pedido-001';
+
+  qp("track", "Purchase", {
+    value: value,
+    currency: "BRL",
+    order_id: orderId
+  });
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      color: #2ecc71;
+    }
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>✅ Compra confirmada!</h1>
+  <p>Obrigado pela sua compra.<br />Seu pedido foi realizado com sucesso.</p>
+</body>
+</html>
